@@ -5,7 +5,7 @@ export default function ApiTest() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/hello`)
+    fetch(`https://backend-api-8g5t.onrender.com/api/hello`)
       .then((res) => res.json())
       .then((data) => setMessage(data.message))
       .catch((err) => console.error("Error:", err));
